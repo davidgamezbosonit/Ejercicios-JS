@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Ejercicio8</title>
+    
+
+    <script>
+
+/*Crea una función que convierta un número de bytes en un formato con valores legibles 
+('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB')
+La función debe tener 2 parámetros:
+Primer parámetro debe ser el número de bytes
+Segundo parámetro debe ser un número especificando la cantidad de dígitos a los que se 
+debe truncar el resultado (esto se puede hacer con Number.prototype.toPrecision()).
+Por defecto, este parámetro debe de tener un valor de 3.*/
+
+
+
+        function bytesToSize(bytes){
+               var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+               if (bytes == 0) return '0 Byte';
+               var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+               return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+        }
+
+        console.log(bytesToSize(1234544467999999999999955589));
+        console.log(bytesToSize(4578963));
+        console.log(bytesToSize(1247878963));
+
+
+
+        
+
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
