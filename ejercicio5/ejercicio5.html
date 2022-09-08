@@ -21,7 +21,10 @@
         ]
         
 
-        const newArr = arrCities2.filter(item => item.capital == false && item.country == 'Spain');
+        const newArr = arrCities2.filter(item => !item.capital && item.country === 'Spain').map(item2 => ({
+            city: item2.city, isSpain: item2.country === 'Spain'
+        }));
+
 
         console.log(newArr);
 
