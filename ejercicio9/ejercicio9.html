@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Ejercicio9</title>
+    
+
+    <script>
+
+    /*Crea una función que a partir de un objeto de entrada, retorne un objeto asegurándose que 
+    las claves del objeto estén en lowercase.
+    La función debe tener un objeto como único parámetro.*/
+
+    const myObject = { NamE: 'Charles', ADDress: 'Home Street' };
+
+    const myObjectToArray = Object.entries(myObject);
+
+    const l = myObjectToArray.map(function(t){
+        t[0] = t[0].toLowerCase()
+        return t;
+        }
+    );
+
+    const a  = Object.fromEntries(l);
+
+    console.log(a);
+
+
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
