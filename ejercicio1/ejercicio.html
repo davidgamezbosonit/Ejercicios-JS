@@ -15,22 +15,28 @@
         {id: 5, name: 'Lala'}
       ];
 
-      const obj = arrNames.filter(function(obj) {
-        return obj.id === 3;
-      });
 
-      console.log(obj);
+      const found = arrNames.find(element => element.id === 3);
+
+      console.log(found);
+
+    
+      // const obj = arrNames.filter(function(obj) {
+      //   return obj.id === 3;
+      // });
+
+      // console.log(obj);
 
       
-      const name3 = arrNames.filter(function(name) {
-        return name.id === 3;
-      });
+      // const name3 = arrNames.filter(function(name) {
+      //   return name.id === 3;
+      // });
 
-      console.log(name3);
+      // console.log(name3);
 
-      const id3 = arrNames.find(user => user.id ===3);
+      // const id3 = arrNames.find(user => user.id ===3);
 
-      console.log(id3);
+      // console.log(id3);
 
      
 

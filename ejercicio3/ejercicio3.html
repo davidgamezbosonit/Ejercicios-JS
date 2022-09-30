@@ -16,16 +16,21 @@
             {city: 'Jaén', country: 'Spain', capital: false}
         ]
 
-        const resultado = arrCities.filter(function (ciudad) {
-            return ciudad.country === 'Spain' && !ciudad.capital
-        });
+
+        const result = arrCities.filter(x => x.country === 'Spain' && x.capital != true);
+
+        console.log(result);
+
+      //   const resultado = arrCities.filter(function (ciudad) {
+      //       return ciudad.country === 'Spain' && !ciudad.capital
+      //   });
         
         
-         console.log(resultado);
+      //    console.log(resultado);
 
-      const arrCapitales = arrCities.filter(item => item.country === 'Spain' && item.capital != true);
+      // const arrCapitales = arrCities.filter(item => item.country === 'Spain' && item.capital != true);
 
-      console.log(arrCapitales);
+      // console.log(arrCapitales);
         
 
 
