@@ -15,16 +15,33 @@ Por defecto, este parámetro debe de tener un valor de 3.*/
 
 
 
-        function bytesToSize(bytes){
-               let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-               if (bytes == 0) return '0 Byte';
-               let i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-               return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
-        }
+        // function bytesToSize(bytes){
+        //        let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+        //        if (bytes == 0) return '0 Byte';
+        //        let i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+        //        return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+        // }
 
-        console.log(bytesToSize(1234544467999999999999955589));
-        console.log(bytesToSize(4578963));
-        console.log(bytesToSize(1247878963));
+        // console.log(bytesToSize(1234544467999999999999955589));
+        // console.log(bytesToSize(4578963));
+        // console.log(bytesToSize(1247878963));
+
+        function formatBytes(bytes, decimals = 2) {
+    if (!+bytes) return '0 Bytes'
+
+    const k = 1024
+    const dm = decimals < 0 ? 0 : decimals
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+
+    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+    }
+
+    const result = formatBytes(150000000000,2);
+
+    console.log(result);
+
 
 
 

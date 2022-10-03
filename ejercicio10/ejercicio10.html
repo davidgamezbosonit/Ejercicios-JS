@@ -8,19 +8,25 @@
         /*Crea una función que elimine las etiquetas html o xml de un string.
         La función debe tener un string como único parámetro.*/
 
-        function removeTags(str) {
-            if ((str===null) || (str===''))
-                return false;
-            else
-                str = str.toString();
+        // function removeTags(str) {
+        //     if ((str===null) || (str===''))
+        //         return false;
+        //     else
+        //         str = str.toString();
         
-            return str.replace( /(<([^>]+)>)/ig, '');
-        };
+        //     return str.replace( /(<([^>]+)>)/ig, '');
+        // };
+
+        // const result = removeTags('<div><span>lorem</span> <strong>ipsum</strong></div>');
+
+        // console.log(result);
+
+        const removeTags = (str) => str.replace( /(<([^>]+)>)/ig, '');
+
+        console.log(removeTags('<div><span>lorem</span> <strong>ipsum</strong></div>'));
         
 
-        const result = removeTags('<div><span>lorem</span> <strong>ipsum</strong></div>');
-
-        console.log(result);
+        
 
 
 
